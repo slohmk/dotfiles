@@ -27,5 +27,11 @@ set incsearch       " but highlight while searching
 set ignorecase      " searches are case-insensitive
 
 " for coding
-syntax enable
-set nowrap
+syntax enable       " enable syntax highlighting
+set nowrap          " do not wrap text
+set colorcolumn=81  " show a red margin on the right limit
+if has('autocmd')
+    " highlight extra whitespaces
+    highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
+    autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
+endif
