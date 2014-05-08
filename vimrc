@@ -33,5 +33,5 @@ set colorcolumn=81  " show a red margin on the right limit
 if has('autocmd')
     " highlight extra whitespaces
     highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
-    autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
+    match ExtraWhitespace /\s\+$/
 endif
