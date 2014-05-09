@@ -35,8 +35,9 @@ syntax enable       " enable syntax highlighting
 set nowrap          " do not wrap text
 "set fo-=t           " do not word wrap while typing
 set colorcolumn=81  " show a red margin on the right limit
+hi ColorColumn ctermbg=darkgrey guibg=darkgrey
 if has('autocmd')
     " highlight extra whitespaces
-    highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
+    highlight ExtraWhitespace ctermbg=darkred guibg=darkred
     match ExtraWhitespace /\s\+$/
 endif
