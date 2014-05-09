@@ -1,6 +1,10 @@
 " disable vi compatible mode
 set nocompatible
 
+" pathogen
+call pathogen#infect()
+call pathogen#helptags()
+
 " set filetype detection, plugin and indent on
 filetype plugin indent on
 
