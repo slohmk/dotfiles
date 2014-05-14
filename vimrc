@@ -14,6 +14,10 @@ if $COLORTERM == 'gnome-terminal'
     colorscheme ir_black
 endif
 
+" hide buffers instead of closing
+" this allows you to work on other files without saving the current buffer
+set hidden
+
 " show line numbers and show info at bottom
 set number
 set ruler
