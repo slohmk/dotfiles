@@ -35,9 +35,8 @@ if has("gui_running")
     "Only run gVim in Windows environment!
     set guifont=Consolas:h11
     set guifontwide=SimHei:h11
-endif
-
-if $COLORTERM=='gnome-terminal'
+else
+    "This will fail in Windows CMD
     set t_Co=256
 endif
 
