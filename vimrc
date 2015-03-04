@@ -24,26 +24,6 @@ set nobackup
 "This enable work on other files without saving the current buffer
 set hidden
 
-"UI settings
-if has("gui_running")
-    au GUIEnter * simalt ~x "Start GVIM maximised
-    set guioptions-=m "Remove the Menu bar
-    set guioptions-=T "Remove the Tool bar
-    set guioptions-=r "Remove the right scrollbar
-    set guioptions-=L "Remove the left scrollbar
-
-    "Only run gVim in Windows environment!
-    set guifont=Consolas:h11
-    set guifontwide=SimHei:h11
-else
-    "This will fail in Windows CMD
-    set t_Co=256
-endif
-
-colorscheme jellybeans
-set number "Display line number
-set ruler "Display the ruler - aka status bar at the bottom
-
 "Behaviours
 set backspace=indent,eol,start "VIM backspace to behave like other editors
 
@@ -62,3 +42,23 @@ set tabstop=4 "One tab = 4 spaces
 set shiftwidth=4 "Number of spaces for indentation
 set shiftround "Always indent/outdent to the nearest tabstop
 set colorcolumn=81 "Right margin
+
+"UI settings
+colorscheme jellybeans
+if has("gui_running")
+    au GUIEnter * simalt ~x "Start GVIM maximised
+    set guioptions-=m "Remove the Menu bar
+    set guioptions-=T "Remove the Tool bar
+    set guioptions-=r "Remove the right scrollbar
+    set guioptions-=L "Remove the left scrollbar
+
+    "Only run gVim in Windows environment!
+    set guifont=Consolas:h11
+    set guifontwide=SimHei:h11
+else
+    "This only works on UNIX terminal in modern OS.
+    set t_Co=256
+endif
+
+set number "Display line number
+set ruler "Display the ruler - aka status bar at the bottom

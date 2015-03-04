@@ -1,3 +1,6 @@
 [submodule "vim/bundle/jellybeans.vim"]
 	path = vim/bundle/jellybeans.vim
 	url = https://github.com/nanotech/jellybeans.vim.git
+[submodule "vim/bundle/php.vim"]
+	path = vim/bundle/php.vim
+	url = https://github.com/StanAngeloff/php.vim.git

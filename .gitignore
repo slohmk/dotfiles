@@ -1,0 +1,5 @@
+
+# Hide all dot files except gitignore and gitmodules
+.*
+!.gitignore
+!.gitmodules
