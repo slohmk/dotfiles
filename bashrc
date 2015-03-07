@@ -15,5 +15,8 @@ fi
 export VISUAL=vim
 export EDITOR=vim
 
+# Disable GUI popup for authentication
+unset SSH_ASKPASS
+
 # Show colours in tree command
 alias tree='tree -C'
