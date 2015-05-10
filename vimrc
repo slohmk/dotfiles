@@ -41,7 +41,7 @@ set expandtab "Insert spaces when tab is pressed
 set tabstop=4 "One tab = 4 spaces
 set shiftwidth=4 "Number of spaces for indentation
 set shiftround "Always indent/outdent to the nearest tabstop
-"set colorcolumn=81 "Right margin
+set colorcolumn=81 "Right margin
 
 "UI settings
 colorscheme jellybeans
