@@ -1,5 +1,5 @@
 call plug#begin()
-Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'fatih/vim-go'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'SirVer/ultisnips'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -98,7 +98,8 @@ let g:go_fmt_autosave=0
 
 " Import missing paths in Go file on save
 " This will not work while g:go_fmt_autosave=0
-let g:go_fmt_command="goimports"
+" NOTE: Enabling this will disable gofmt capability - 2018-04-19
+"let g:go_fmt_command="goimports"
 
 " Use camelCase instead of snake_case when annotating JSON to structs.
 let g:go_addtags_transform = "camelcase"
