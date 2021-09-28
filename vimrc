@@ -1,9 +1,21 @@
+" -------
+" VIMPLUG
+" -------
+call plug#begin('~/.vim/plugged')
+
+Plug 'dracula/vim', {'name': 'dracula'}
+
+call plug#end()
+
 " ----------------
 " GENERAL SETTINGS
 " ----------------
 
 " Disable compatibility with vi which can cause unexpected issues.
 set nocompatible
+
+" Color scheme
+colorscheme dracula
 
 " Enable type file detection.
 filetype on
@@ -23,9 +35,3 @@ set tabstop=4
 set expandtab
 set nowrap
 
-" -------
-" VIMPLUG
-" -------
-call plug#begin('~/.vim/plugged')
-
-call plug#end()
