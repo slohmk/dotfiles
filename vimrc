@@ -22,3 +22,10 @@ set shiftwidth=4
 set tabstop=4
 set expandtab
 set nowrap
+
+" -------
+" VIMPLUG
+" -------
+call plug#begin('~/.vim/plugged')
+
+call plug#end()
