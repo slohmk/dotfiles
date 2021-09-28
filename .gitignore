@@ -3,3 +3,6 @@
 .*
 !.gitignore
 !.gitmodules
+
+# Hide vimplug binaries
+vim/plugged
