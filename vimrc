@@ -3,7 +3,9 @@
 " -------
 call plug#begin('~/.vim/plugged')
 
+" Color schemes
 Plug 'dracula/vim', {'name': 'dracula'}
+Plug 'jnurmine/Zenburn', {'name': 'zenburn'}
 
 call plug#end()
 
@@ -15,7 +17,7 @@ call plug#end()
 set nocompatible
 
 " Color scheme
-colorscheme dracula
+colorscheme zenburn
 
 " Enable type file detection.
 filetype on
