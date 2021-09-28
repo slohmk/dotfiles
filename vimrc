@@ -7,6 +7,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'dracula/vim', {'name': 'dracula'}
 Plug 'jnurmine/Zenburn', {'name': 'zenburn'}
 
+Plug 'scrooloose/nerdtree', {'name': 'nerdtree'}
+
 call plug#end()
 
 " ----------------
@@ -32,11 +34,20 @@ set ignorecase "Searches are case-insensitive
 " KEY BINDINGS
 " ------------
 
+" Leader key remap
+let mapleader = ","
+
 " Split navigations
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" NERDTree
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-N> :NERDTree<CR>
+nnoremap <C-T> :NERDTreeToggle<CR>
+nnoremap <C-F> :NERDTreeFind<CR>
 
 " Enable folding with spacebar
 nnoremap <space> za
@@ -71,4 +82,6 @@ au BufNewFile,BufRead *.py
     \ set expandtab
     \ set autoindent
     \ set fileformat=unix
+
+let NERDTreeIgnore=['\.pyc$', '\~$']
 
