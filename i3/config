@@ -244,7 +244,7 @@ workspace_auto_back_and_forth yes
 set $mode_display Config monitor resolution - Default config (d)
 
 mode "$mode_display" {
-    bindsym d exec --no-startup-id sh "$HOME/.config/X11/monitor.sh", mode "default"
+    bindsym d exec --no-startup-id sh "$HOME/.config/scripts/monitor.sh", mode "default"
 
     # back to normal: Enter or Escape or $mod+x
     bindsym Return mode "default"
@@ -253,9 +253,6 @@ mode "$mode_display" {
 }
 
 bindsym $mod+x mode "$mode_display"
-
-# set wallpaper
-exec --no-startup-id feh --no-fehbg --bg-fill ~/Pictures/wallpapers/gruvbox_astronaut.jpg
 
 # floating pop up automatically
 for_window [window_role="pop-up"] floating enable
