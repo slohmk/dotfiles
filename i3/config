@@ -213,7 +213,7 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-#        status_command i3status
+    #status_command i3status
     status_command i3status --config ~/.config/i3/i3status.conf
 
     # disable all tray icons
@@ -240,18 +240,21 @@ focus_follows_mouse no
 # enable workspace selection toggle on same keystroke
 workspace_auto_back_and_forth yes
 
-#configure screen
-set $mode_display Config monitor resolution - Default config (d)
+# displays
+#
+# configure screen resolutions and positions
+set $monitor sh "$HOME/.config/scripts/monitor.sh"
+exec $monitor
 
+set $mode_display Config monitor resolution - Default config (d)
 mode "$mode_display" {
-    bindsym d exec --no-startup-id sh "$HOME/.config/scripts/monitor.sh", mode "default"
+    bindsym d exec --no-startup-id $monitor, mode "default"
 
     # back to normal: Enter or Escape or $mod+x
     bindsym Return mode "default"
     bindsym Escape mode "default"
     bindsym $mod+x mode "default"
 }
-
 bindsym $mod+x mode "$mode_display"
 
 # floating pop up automatically
